@@ -30,6 +30,7 @@ header h1 strong {
 /* Content Wrapper */
 .content-wrap {
   display: flex;
+  flex-direction: row;
 }
 
 /* Sidebar */
@@ -141,4 +142,62 @@ header h1 strong {
   transform: scale(1.05);
 }
 
-/* Source Map (Leave as is) */
+/* Media Queries */
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .content-wrap {
+    flex-direction: column;
+  }
+
+  .content-wrap aside {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .content-wrap main .anime-list .anime-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .search-box input {
+    max-width: 100%;
+  }
+}
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+  .content-wrap {
+    flex-direction: column;
+  }
+
+  .content-wrap aside {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .content-wrap main .anime-list .anime-card {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .search-box input {
+    max-width: 100%;
+  }
+}
+
+/* Laptop (up to 1024px) */
+@media (max-width: 1024px) {
+  .content-wrap main .anime-list .anime-card {
+    flex: 1 1 33.333%;
+    max-width: 33.333%;
+  }
+
+  .content-wrap aside {
+    max-width: 200px;
+  }
+}
