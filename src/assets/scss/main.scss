@@ -1,0 +1,109 @@
+// Define colors for dark mode
+$background-color: #000;
+$text-color: #fff;
+$input-background: #333;
+$input-focus-background: #444;
+$card-background: #222;
+$link-color: #007bff;
+
+// Global styles
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// Main head section
+.main-head {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+// Search box styling
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+
+  input[type='search'] {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid $link-color;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+    background-color: $input-background;
+    color: $text-color;
+
+    &:focus {
+      border-color: darken($link-color, 20%);
+      background-color: $input-focus-background;
+    }
+  }
+}
+
+// Anime list layout
+.anime-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+// Anime card styling
+.anime-card {
+  flex: 1 1 calc(33.333% - 32px);
+  max-width: calc(33.333% - 32px);
+  background-color: $card-background;
+  border-radius: 8px;
+  color: $text-color;
+  padding: 10px;
+
+  figure {
+    margin: 0 0 8px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Link styling
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Optional: Sidebar styling
+.sidebar {
+  background-color: darken($background-color, 10%);
+  color: $text-color;
+  padding: 20px;
+  width: 250px;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
