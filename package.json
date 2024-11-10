@@ -2,7 +2,7 @@
   "name": "react-jikananime",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VenomMonstee.github.io/anime-db",
+  "homepage": ".",
   "dependencies": {
     "@craco/craco": "^7.1.0",
     "@shadcn/ui": "^0.0.4",
